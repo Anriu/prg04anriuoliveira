@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E8DFD4;
+    color: #373841;
+}
+
+header {
+    background-color: #1C3353;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header a {
+    color: white;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1C3353;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+p{
+    text-align: justify;
+}
+.cor-principal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.azul-principal {
+    width: 100px;
+    height: 100px;
+    background-color: #1C3353;
+    border-radius: 10px;
+}
+
+.paleta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cor {
+    width: 120px;
+    height: 70px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Azuis */
+.azul1 { background-color: #1C3353; }
+.azul2 { background-color: #569BFC; }
+.azul3 { background-color: #4882D4; }
+.azul4 { background-color: #3A69AB; }
+.azul5 { background-color: #2C5082; }
+
+/* Verdes */
+.verde1 { background-color: #39A04C; }
+.verde2 { background-color: #2D7D3C; }
+.verde3 { background-color: #1E5428; }
+.verde4 { background-color: #59F776; }
+.verde5 { background-color: #4ACF63; }
+
+/* Destaque */
+.vermelho { background-color: #CE393F; }
+
+/* Neutros */
+.cinza1 { background-color: #D9D9D9; color: #373841; }
+.cinza2 { background-color: #DBDBDB; color: #373841; }
+.cinza3 { background-color: #B3B3B3; }
+.cinza4 { background-color: #8A8A8A; }
+.cinza5 { background-color: #616161; }
+
+/* Instrumentos */
+.instrumento1 { background-color: #F79228; }
+.instrumento2 { background-color: #DD7B2A; }
+.instrumento3 { background-color: #E8DFD4; color: #373841; }
+.instrumento4 { background-color: #373841; }
+.instrumento5 { background-color: #AE5328; }
+.instrumento6 { background-color: #ECC869; color: #373841; }
+.instrumento7 { background-color: #F8B674; color: #373841; }
+.instrumento8 { background-color: #5A261E; }
+.instrumento9 { background-color: #B78358; }
+.instrumento10 { background-color: #000000; }
