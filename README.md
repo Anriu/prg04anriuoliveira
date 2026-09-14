@@ -36,12 +36,12 @@ Descrição dos módulos planejados para a plataforma.
 
 ## 📁 Estrutura do Projeto
 .
-├── assets/
-│   ├── css/
-│   ├── fonts/
-│   ├── icons/
-│   ├── images/
-│   └── js/
-│
-├── index.html
-└── README.md
+├── assets/<br>
+│   ├── css/<br>
+│   ├── fonts/<br>
+│   ├── icons/<br>
+│   ├── images/<br>
+│   └── js/<br>
+│<br>
+├── index.html<br>
+└── README.md<br>
