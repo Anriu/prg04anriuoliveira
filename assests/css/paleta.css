@@ -1,21 +1,28 @@
-* {
-    box-sizing: border-box;
-}
+/*Arquivo em padrão UTF-8*/
+@charset "UTF-8";
 
+/*Impotação de uma font externa "Roboto Slab*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+/*Configurações css para o corpo geral da página*/
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E8DFD4;
+    font-family: "Roboto Slab", sans-serif;
+    background-color: white;
     color: #373841;
 }
 
+/*Configurações do cabeçalho*/
 header {
-    background-color: #1C3353;
+    background-color: #000000;
     color: white;
     padding: 25px;
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+/*Configuração das âncoras*/
 header a {
     color: white;
 }
@@ -31,6 +38,7 @@ section {
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
