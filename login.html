@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="assests/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assests/css/login.css">   
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <!-- O atributo action simula o redirecionamento fictício após a validação do lado do cliente -->
+        <form action="admin.html" method="GET">
+            <label for="email">E-mail:</label>
+            <!-- Uso do type="email" e atributo "required" para validação do HTML5 -->
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            
+            <label for="senha">Senha:</label>
+            <!-- Uso do type="password" e atributo "required" para validação do HTML5 -->
+            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+            
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
