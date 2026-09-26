@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #444;
+}
+
+/* Estilização da tabela*/
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse; /* Remove o espaço duplo entre as bordas */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bordas, alinhamento e espaçamento das células */
+th,
+td {
+  border: 1px solid #606060;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+/* Destaque para o cabeçalho (<th>) */
+th {
+  background-color: #606060;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Cor alternada nas linhas para facilitar a leitura */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilização dos botões de ação */
+.btn-acao {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 4px;
+}
+
+/* Hierarquia visual: Azul/Verde para Editar (Ação Positiva/Neutra) */
+.btn-editar {
+  background-color: #007bff;
+}
+.btn-editar:hover {
+  background-color: #0056b3;
+}
+
+/* Hierarquia visual: Vermelho para Excluir (Ação Destrutiva/Atenção) */
+.btn-excluir {
+  background-color: #dc3545;
+}
+.btn-excluir:hover {
+  background-color: #c82333;
+}
