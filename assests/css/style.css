@@ -3,7 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 
-/* ==================== Corpo ==================== */
+/* ==================================================
+   ESTILOS BASE — MOBILE FIRST
+   Smartphones: até 600px
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -17,38 +24,63 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 
-    padding: 25px;
+    padding: 20px;
 
     background-color: #000000;
     color: white;
 
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 header h1 {
-    width: 400px;
-}
-
-header a {
-    margin: 10px;
-
-    color: white;
-    text-decoration: none;
+    width: 100%;
+    margin: 0 0 20px;
+    font-size: 1.8rem;
 }
 
 
 /* ==================== Navegação ==================== */
 
 nav {
+    width: 100%;
+}
+
+nav ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-    width: 350px;
-    height: 100%;
+    gap: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+nav li {
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+
+    padding: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #373841;
 }
 
 
@@ -56,41 +88,69 @@ nav {
 
 main {
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
+    align-items: center;
+
     width: 90%;
-    max-width: 85%;
-    margin-left: 50px;
+    max-width: 1200px;
+
+    margin: 40px auto;
 }
 
-img{
-    transform: rotate(-40deg);
-}
 
 /* ==================== Artigo ==================== */
 
 article {
-    width: 700px;
-    margin-left: 100px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 50px;
+    width: 100%;
+
+    margin: 0 0 40px;
+    padding: 25px;
 
     text-align: justify;
 
-    border-radius: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+article p {
+    line-height: 1.7;
+}
+
+
+/* ==================== Imagem ==================== */
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+picture img {
+    display: block;
+
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+
+    transform: rotate(-20deg);
 }
 
 
 /* ==================== Rodapé ==================== */
 
 footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+
     background-color: #000000;
     color: white;
-    padding: 40px;
-    margin-top: 80px;
+
     text-align: center;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
+
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25);
 }
 
 footer h3 {
@@ -99,17 +159,145 @@ footer h3 {
 
 footer p {
     margin: 15px 0;
+    line-height: 1.5;
 }
 
 .copyright {
     font-size: 14px;
 }
 
-.botao-login {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1C3353;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+
+/* ==================================================
+   TABLETS
+   601px até 1024px
+   ================================================== */
+
+@media (min-width: 601px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 25px 40px;
+    }
+
+    header h1 {
+        width: auto;
+        margin: 0;
+
+        font-size: 2rem;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    nav li {
+        width: auto;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+
+    /* Conteúdo */
+
+    main {
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    article {
+        width: 90%;
+        padding: 40px;
+    }
+
+    picture img {
+        width: 45%;
+        max-width: 400px;
+    }
+
+}
+
+
+/* ==================================================
+   DESKTOP
+   acima de 1025px
+   ================================================== */
+
+@media (min-width: 1025px) {
+
+    header {
+        padding: 25px 50px;
+    }
+
+    header h1 {
+        width: 400px;
+    }
+
+    nav {
+        width: 500px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+
+    /* Conteúdo lado a lado */
+
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 90%;
+        max-width: 1200px;
+
+        margin: 80px auto;
+    }
+
+
+    /* Artigo */
+
+    article {
+        width: 60%;
+
+        margin: 0;
+        padding: 50px;
+
+        border-radius: 40px;
+    }
+
+
+    /* Imagem */
+
+    picture {
+        width: 35%;
+    }
+
+    picture img {
+        width: 100%;
+        max-width: 400px;
+
+        transform: rotate(-40deg);
+    }
+
+
+    /* Rodapé */
+
+    footer {
+        margin-top: 80px;
+        padding: 40px;
+    }
+
 }
