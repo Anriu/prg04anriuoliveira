@@ -4,8 +4,7 @@
 
 
 /* ==================================================
-   ESTILOS BASE — MOBILE FIRST
-   Smartphones: até 600px
+   CONFIGURAÇÕES GERAIS
    ================================================== */
 
 * {
@@ -14,97 +13,60 @@
 
 body {
     margin: 0;
+
     font-family: "Roboto Slab", sans-serif;
+
     background-color: white;
     color: #373841;
 }
 
 
-/* ==================== Cabeçalho ==================== */
+/* ==================================================
+   NAVBAR
+   O Bootstrap controla a estrutura e responsividade.
+   Aqui mantemos apenas a identidade visual.
+   ================================================== */
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px;
-
-    background-color: #000000;
-    color: white;
-
-    text-align: center;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-header h1 {
-    width: 100%;
-    margin: 0 0 20px;
-    font-size: 1.8rem;
+.navbar {
+    background-color: #000000 !important;
 }
 
-
-/* ==================== Navegação ==================== */
-
-nav {
-    width: 100%;
+.navbar-brand {
+    font-family: "Roboto Slab", sans-serif;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.nav-link {
+    color: white !important;
 
-    gap: 10px;
-
-    padding: 0;
-    margin: 0;
-
-    list-style: none;
+    transition: background-color 0.3s ease;
 }
 
-nav li {
-    width: 100%;
-    text-align: center;
-}
-
-nav a {
-    display: block;
-
-    padding: 10px;
-
-    color: white;
-    text-decoration: none;
-
+.nav-link:hover {
+    background-color: #373841;
     border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: #373841;
-}
 
-
-/* ==================== Conteúdo principal ==================== */
+/* ==================================================
+   CONTEÚDO PRINCIPAL
+   O Bootstrap Grid controla as colunas.
+   ================================================== */
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 40px auto;
+    min-height: 500px;
 }
 
 
-/* ==================== Artigo ==================== */
+/* ==================================================
+   ARTIGO
+   ================================================== */
 
 article {
-    width: 100%;
-
-    margin: 0 0 40px;
-    padding: 25px;
+    padding: 30px;
 
     text-align: justify;
 
@@ -118,10 +80,13 @@ article p {
 }
 
 
-/* ==================== Imagem ==================== */
+/* ==================================================
+   IMAGEM
+   ================================================== */
 
 picture {
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -131,18 +96,25 @@ picture {
 picture img {
     display: block;
 
-    width: 70%;
-    max-width: 350px;
     height: auto;
 
     transform: rotate(-20deg);
+
+    transition: transform 0.3s ease;
+}
+
+picture img:hover {
+    transform: rotate(-15deg) scale(1.05);
 }
 
 
-/* ==================== Rodapé ==================== */
+/* ==================================================
+   RODAPÉ
+   ================================================== */
 
 footer {
     margin-top: 50px;
+
     padding: 30px 20px;
 
     background-color: #000000;
@@ -159,6 +131,7 @@ footer h3 {
 
 footer p {
     margin: 15px 0;
+
     line-height: 1.5;
 }
 
@@ -168,135 +141,41 @@ footer p {
 
 
 /* ==================================================
-   TABLETS
-   601px até 1024px
+   AJUSTES PARA TABLETS
    ================================================== */
 
-@media (min-width: 601px) {
-
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-
-        padding: 25px 40px;
-    }
-
-    header h1 {
-        width: auto;
-        margin: 0;
-
-        font-size: 2rem;
-    }
-
-    nav {
-        width: auto;
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-
-        gap: 5px;
-    }
-
-    nav li {
-        width: auto;
-    }
-
-    nav a {
-        padding: 10px;
-    }
-
-
-    /* Conteúdo */
-
-    main {
-        width: 90%;
-        margin: 60px auto;
-    }
+@media (min-width: 768px) {
 
     article {
-        width: 90%;
         padding: 40px;
     }
 
     picture img {
-        width: 45%;
-        max-width: 400px;
+        transform: rotate(-30deg);
     }
 
 }
 
 
 /* ==================================================
-   DESKTOP
-   acima de 1025px
+   AJUSTES PARA DESKTOP
    ================================================== */
 
-@media (min-width: 1025px) {
-
-    header {
-        padding: 25px 50px;
-    }
-
-    header h1 {
-        width: 400px;
-    }
-
-    nav {
-        width: 500px;
-    }
-
-    nav ul {
-        justify-content: flex-end;
-        gap: 10px;
-    }
-
-
-    /* Conteúdo lado a lado */
-
-    main {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        width: 90%;
-        max-width: 1200px;
-
-        margin: 80px auto;
-    }
-
-
-    /* Artigo */
+@media (min-width: 992px) {
 
     article {
-        width: 60%;
-
-        margin: 0;
         padding: 50px;
 
         border-radius: 40px;
     }
 
-
-    /* Imagem */
-
-    picture {
-        width: 35%;
-    }
-
     picture img {
-        width: 100%;
-        max-width: 400px;
-
         transform: rotate(-40deg);
     }
 
-
-    /* Rodapé */
-
     footer {
         margin-top: 80px;
+
         padding: 40px;
     }
 
