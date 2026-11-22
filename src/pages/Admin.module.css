@@ -1,0 +1,32 @@
+/* Mobile: título e botão "Novo usuário" empilhados. */
+.topo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-3);
+}
+
+.busca {
+  margin-bottom: var(--espaco-2);
+}
+
+/* Tablet: título à esquerda, botão à direita. */
+@media (min-width: 601px) {
+  .topo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .busca {
+    max-width: 24rem;
+  }
+}
+
+/* Desktop: campo de busca mais largo. */
+@media (min-width: 1025px) {
+  .busca {
+    max-width: 28rem;
+  }
+}

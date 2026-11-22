@@ -1,0 +1,79 @@
+.rodape {
+  margin-top: var(--espaco-4);
+  background-color: var(--cor-instrumento-10);
+  color: var(--cor-cinza-1);
+  box-shadow: 0 -0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+}
+
+/* Colunas empilhadas no mobile. */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+  padding-block: var(--espaco-4);
+}
+
+.titulo {
+  margin-bottom: var(--espaco-1);
+  font-size: 1.1rem;
+  color: var(--cor-dourado);
+}
+
+.texto {
+  margin: 0;
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  color: var(--cor-cinza-1);
+  text-decoration: none;
+  transition: color var(--transicao);
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--cor-dourado);
+  text-decoration: underline;
+}
+
+/* Marcador decorativo dos links. */
+.links li::before {
+  content: '♪ ';
+  color: var(--cor-instrumento-1);
+}
+
+.copyright {
+  margin: 0;
+  padding: var(--espaco-2);
+  text-align: center;
+  border-top: 1px solid var(--cor-cinza-5);
+}
+
+/* Tablet+: colunas lado a lado, quebrando quando faltar espaço. */
+@media (min-width: 601px) {
+  .conteudo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .coluna {
+    flex: 1 1 14rem;
+  }
+}
+
+/* Desktop: mais espaçamento vertical. */
+@media (min-width: 1025px) {
+  .rodape {
+    margin-top: 5rem;
+  }
+
+  .conteudo {
+    padding-block: 3rem;
+  }
+}

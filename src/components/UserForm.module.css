@@ -1,0 +1,21 @@
+.painel {
+  margin-bottom: var(--espaco-3);
+  border: 0;
+  border-left: 0.3rem solid var(--cor-secundaria);
+  box-shadow: var(--sombra);
+}
+
+/* Mobile: botões empilhados com a ação principal (salvar) no topo. */
+.botoes {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--espaco-1);
+  margin-top: var(--espaco-3);
+}
+
+@media (min-width: 601px) {
+  .botoes {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

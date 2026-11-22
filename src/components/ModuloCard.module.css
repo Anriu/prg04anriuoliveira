@@ -1,0 +1,29 @@
+.card {
+  border: 0;
+  border-top: 0.25rem solid var(--cor-secundaria);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+/* Elevação ao interagir; :focus-within cobre a navegação por teclado. */
+.card:hover,
+.card:focus-within {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.75rem 1.5rem rgba(28, 51, 83, 0.2);
+}
+
+.numero {
+  margin-bottom: var(--espaco-1);
+  background-color: var(--cor-instrumento-6);
+  color: var(--cor-instrumento-10);
+}
+
+.titulo {
+  color: var(--cor-primaria);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

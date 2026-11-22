@@ -1,0 +1,50 @@
+.envoltorio {
+  background-color: var(--cor-superficie);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* Cabeçalho na cor primária, via variável que o Bootstrap aplica às células. */
+.cabecalho th {
+  --bs-table-bg: var(--cor-primaria);
+  --bs-table-color: #ffffff;
+  white-space: nowrap;
+}
+
+.legenda {
+  caption-side: bottom;
+  padding: var(--espaco-1) var(--espaco-2);
+  color: var(--cor-texto-suave);
+  font-size: 0.875rem;
+}
+
+/* E-mails longos quebram em vez de alargar a tabela no celular. */
+.email {
+  word-break: break-all;
+}
+
+/* Mobile: botões empilhados para economizar largura. */
+.acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.375rem;
+}
+
+/* Tablet+: botões lado a lado, alinhados à direita. */
+@media (min-width: 601px) {
+  .acoes {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .email {
+    word-break: normal;
+  }
+}
+
+@media (min-width: 1025px) {
+  .acoes {
+    gap: var(--espaco-1);
+  }
+}

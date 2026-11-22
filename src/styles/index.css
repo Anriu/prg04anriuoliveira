@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/* =====================================================================
+   CSS GLOBAL — Portal da Filarmônica
+   ---------------------------------------------------------------------
+   Importado após o Bootstrap para que os tokens da marca sobrescrevam o
+   tema do framework. Estilos de componentes ficam nos *.module.css.
+
+   Abordagem mobile first, com os mesmos breakpoints em todo o projeto:
+     base                          -> smartphones (até 600px)
+     @media (min-width: 601px)     -> tablets (601px a 1024px)
+     @media (min-width: 1025px)    -> desktops
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. TOKENS DE DESIGN
+   Azul como cor principal (presente nas fardas das filarmônicas), verde
+   complementar, neutros para equilíbrio e tons metálicos que remetem ao
+   bronze dos instrumentos. Componentes devem consumir os tokens semânticos.
+   --------------------------------------------------------------------- */
+:root {
+  /* Azuis (principal) */
+  --cor-azul-1: #1c3353;
+  --cor-azul-2: #569bfc;
+  --cor-azul-3: #4882d4;
+  --cor-azul-4: #3a69ab;
+  --cor-azul-5: #2c5082;
+
+  /* Verdes (complementar) */
+  --cor-verde-1: #39a04c;
+  --cor-verde-2: #2d7d3c;
+  --cor-verde-3: #1e5428;
+  --cor-verde-4: #59f776;
+  --cor-verde-5: #4acf63;
+
+  /* Destaque */
+  --cor-vermelho: #ce393f;
+
+  /* Neutras */
+  --cor-cinza-1: #d9d9d9;
+  --cor-cinza-2: #dbdbdb;
+  --cor-cinza-3: #b3b3b3;
+  --cor-cinza-4: #8a8a8a;
+  --cor-cinza-5: #616161;
+
+  /* Instrumentos (metais, madeira, bronze) */
+  --cor-instrumento-1: #f79228;
+  --cor-instrumento-2: #dd7b2a;
+  --cor-instrumento-3: #e8dfd4;
+  --cor-instrumento-4: #373841;
+  --cor-instrumento-5: #ae5328;
+  --cor-instrumento-6: #ecc869;
+  --cor-instrumento-7: #f8b674;
+  --cor-instrumento-8: #5a261e;
+  --cor-instrumento-9: #b78358;
+  --cor-instrumento-10: #000000;
+
+  /* Tokens semânticos: trocar o tema exige alterar apenas este bloco. */
+  --cor-primaria: var(--cor-azul-1);
+  --cor-primaria-hover: var(--cor-azul-5);
+  --cor-secundaria: var(--cor-verde-2);
+  --cor-destaque: var(--cor-vermelho);
+  --cor-dourado: var(--cor-instrumento-6);
+  --cor-texto: var(--cor-instrumento-4);
+  --cor-texto-suave: var(--cor-cinza-5);
+  --cor-fundo: #f7f5f2;
+  --cor-superficie: #ffffff;
+  --cor-borda: var(--cor-cinza-1);
+
+  /* Tipografia e escala de espaçamento (rem, respeitando o zoom do usuário) */
+  --fonte-base: 'Roboto Slab', Georgia, serif;
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2rem;
+  --raio: 0.75rem;
+  --sombra: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+  --transicao: 0.3s ease;
+
+  /* Repassa a identidade ao Bootstrap 5.3, que lê estas variáveis. */
+  --bs-body-font-family: var(--fonte-base);
+  --bs-body-color: var(--cor-texto);
+  --bs-body-bg: var(--cor-fundo);
+  --bs-link-color-rgb: 44, 80, 130;   /* = --cor-azul-5 */
+  --bs-link-hover-color-rgb: 28, 51, 83; /* = --cor-azul-1 */
+}
+
+
+/* ---------------------------------------------------------------------
+   2. RESET E BASE
+   border-box inclui padding e borda na largura declarada, evitando
+   estouros horizontais em telas pequenas.
+   --------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-base);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+/* Sticky footer: o <main> cresce para ocupar a altura restante, mantendo o
+   rodapé no fim da tela mesmo em páginas curtas. */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  flex: 1 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+/* Foco visível para navegação por teclado (acessibilidade). */
+:focus-visible {
+  outline: 3px solid var(--cor-dourado);
+  outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------------------
+   3. UTILITÁRIOS DO PROJETO
+   --------------------------------------------------------------------- */
+
+/* Link "pular para o conteúdo": invisível até receber foco pelo teclado. */
+.skip-link {
+  position: absolute;
+  left: var(--espaco-2);
+  top: -3rem;
+  z-index: 2000;
+  padding: var(--espaco-1) var(--espaco-2);
+  background-color: var(--cor-dourado);
+  color: var(--cor-instrumento-10);
+  border-radius: var(--raio);
+  font-weight: 700;
+  transition: top var(--transicao);
+}
+
+.skip-link:focus {
+  top: var(--espaco-1);
+}
+
+/* Superfície padrão para seções de conteúdo. */
+.bloco {
+  padding: var(--espaco-3);
+  margin-bottom: var(--espaco-3);
+  background-color: var(--cor-superficie);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* Título de seção com sublinhado decorativo dourado. */
+.titulo-secao {
+  position: relative;
+  padding-bottom: var(--espaco-1);
+  margin-bottom: var(--espaco-3);
+  font-size: 1.5rem;
+}
+
+.titulo-secao::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: var(--cor-dourado);
+}
+
+
+/* ---------------------------------------------------------------------
+   4. TEMA DO BOOTSTRAP
+   Sobrescreve as variáveis dos componentes em vez das propriedades,
+   mantendo a especificidade baixa e sem !important.
+   --------------------------------------------------------------------- */
+.btn-primary {
+  --bs-btn-bg: var(--cor-primaria);
+  --bs-btn-border-color: var(--cor-primaria);
+  --bs-btn-hover-bg: var(--cor-primaria-hover);
+  --bs-btn-hover-border-color: var(--cor-primaria-hover);
+  --bs-btn-active-bg: var(--cor-primaria-hover);
+  --bs-btn-active-border-color: var(--cor-primaria-hover);
+  --bs-btn-disabled-bg: var(--cor-azul-4);
+  --bs-btn-disabled-border-color: var(--cor-azul-4);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--cor-secundaria);
+  --bs-btn-border-color: var(--cor-secundaria);
+  --bs-btn-hover-bg: var(--cor-verde-3);
+  --bs-btn-hover-border-color: var(--cor-verde-3);
+  --bs-btn-active-bg: var(--cor-verde-3);
+}
+
+.btn-danger {
+  --bs-btn-bg: var(--cor-destaque);
+  --bs-btn-border-color: var(--cor-destaque);
+}
+
+.btn-outline-danger {
+  --bs-btn-color: var(--cor-destaque);
+  --bs-btn-border-color: var(--cor-destaque);
+  --bs-btn-hover-bg: var(--cor-destaque);
+  --bs-btn-hover-border-color: var(--cor-destaque);
+}
+
+.btn-dourado {
+  --bs-btn-bg: var(--cor-dourado);
+  --bs-btn-border-color: var(--cor-dourado);
+  --bs-btn-color: var(--cor-instrumento-10);
+  --bs-btn-hover-bg: var(--cor-instrumento-1);
+  --bs-btn-hover-border-color: var(--cor-instrumento-1);
+  --bs-btn-hover-color: var(--cor-instrumento-10);
+  --bs-btn-active-bg: var(--cor-instrumento-2);
+  --bs-btn-font-weight: 700;
+}
+
+.table {
+  --bs-table-hover-bg: rgba(86, 155, 252, 0.12); /* --cor-azul-2 translúcido */
+}
+
+
+/* =====================================================================
+   TABLET — a partir de 601px
+   ===================================================================== */
+@media (min-width: 601px) {
+  .bloco {
+    padding: var(--espaco-4);
+  }
+
+  .titulo-secao {
+    font-size: 1.75rem;
+  }
+}
+
+
+/* =====================================================================
+   DESKTOP — a partir de 1025px
+   ===================================================================== */
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  .bloco {
+    margin-bottom: var(--espaco-4);
+  }
+
+  .titulo-secao {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,50 @@
+.moldura {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem {
+  display: block;
+  /* Limitada a 80% da coluna: a folga absorve a rotação, que aumenta a caixa
+     da imagem e geraria rolagem horizontal. */
+  max-width: min(12rem, 80%);
+  height: auto;
+  transition: transform var(--transicao);
+}
+
+/* Inclinação decorativa, mais acentuada em telas maiores. */
+.inclinada {
+  transform: rotate(-10deg);
+}
+
+.inclinada:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+@media (min-width: 601px) {
+  .imagem {
+    max-width: min(16rem, 80%);
+  }
+
+  .inclinada {
+    transform: rotate(-20deg);
+  }
+}
+
+@media (min-width: 1025px) {
+  .imagem {
+    max-width: min(22rem, 80%);
+  }
+
+  .inclinada {
+    transform: rotate(-30deg);
+  }
+}
+
+/* Respeita quem pediu menos animação ao sistema operacional. */
+@media (prefers-reduced-motion: reduce) {
+  .imagem {
+    transition: none;
+  }
+}

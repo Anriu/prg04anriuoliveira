@@ -1,184 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portal da Filarmônica: gestão e memória de bandas filarmônicas."
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- preconnect reduz a latência do carregamento da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Portal da Filarmônica</title>
+  </head>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon"
-          href="assests/icons/favicon.ico"
-          type="image/x-icon">
-
-    <!-- Bootstrap 5 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- CSS do projeto -->
-    <link rel="stylesheet"
-          href="assests/css/style.css">
-</head>
-
-<body>
-
-    <!-- ==================== NAVBAR ==================== -->
-
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-
-            <div class="container-fluid">
-
-                <a class="navbar-brand fw-bold" href="index.html">
-                    Portal das Filarmônicas
-                </a>
-
-                <!-- Botão para telas menores -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Links -->
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-
-                    <ul class="navbar-nav ms-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               href="atividade-3.html">
-                                Atividade 3
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               href="SandBox.html">
-                                SandBox
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               href="paletaCores.html">
-                                Paleta de Cores
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               href="login.html">
-                                Login
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-
-    <main class="container my-5">
-
-        <!-- Sistema de Grid do Bootstrap -->
-        <div class="row align-items-center g-5">
-
-            <!-- Coluna do texto -->
-            <div class="col-12 col-md-7">
-
-                <article>
-
-                    <h2 class="display-6 fw-bold mb-4">
-                        Portal da Filarmônica
-                    </h2>
-
-                    <p class="lead text-justify">
-                        Portal da Filarmônica é um sistema desenvolvido
-                        para auxiliar na gestão completa de bandas
-                        filarmônicas, centralizando informações sobre
-                        alunos, músicos, monitores, instrumentos,
-                        fardamentos, repertório, apresentações e demais
-                        recursos da instituição.
-                    </p>
-
-                    <p>
-                        Além das funcionalidades administrativas, o sistema
-                        busca preservar a memória e a trajetória da
-                        filarmônica, permitindo o registro de seu histórico,
-                        apresentações realizadas, repertórios executados e
-                        outros acontecimentos relevantes ao longo de sua
-                        existência.
-                    </p>
-
-                </article>
-
-            </div>
-
-
-            <!-- Coluna da imagem -->
-            <div class="col-12 col-md-5 text-center">
-
-                <picture>
-                    <img
-                        src="assests/images/Tuba.png"
-                        alt="Tuba"
-                        class="img-fluid"
-                        style="max-width: 400px;">
-                </picture>
-
-            </div>
-
-        </div>
-
-    </main>
-
-
-    <!-- ==================== RODAPÉ ==================== -->
-
-    <footer>
-
-        <div class="container">
-
-            <h3 class="h4">
-                Projeto Filarmônicas
-            </h3>
-
-            <p>
-                Valorizando a cultura, a música e a história
-                das bandas filarmônicas.
-            </p>
-
-            <p class="copyright">
-                © 2026 Projeto Filarmônicas -
-                Desenvolvido para a disciplina de Programação Web.
-            </p>
-
-        </div>
-
-    </footer>
-
-
-    <!-- JavaScript do Bootstrap -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-</body>
-
+  <body>
+    <noscript>Ative o JavaScript para utilizar o Portal da Filarmônica.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

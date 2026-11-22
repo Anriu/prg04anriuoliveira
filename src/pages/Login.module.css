@@ -1,0 +1,32 @@
+/* Mobile: cartão ocupando toda a coluna, com padding reduzido. */
+.cartao {
+  padding: var(--espaco-3);
+  border-top: 0.3rem solid var(--cor-primaria);
+  border-radius: var(--raio);
+  background-color: var(--cor-superficie);
+  box-shadow: var(--sombra);
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-top: var(--espaco-3);
+  padding: var(--espaco-1) var(--espaco-2);
+  border: 1px dashed var(--cor-cinza-3);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+@media (min-width: 601px) {
+  .cartao {
+    padding: var(--espaco-4);
+  }
+}
+
+@media (min-width: 1025px) {
+  .cartao {
+    margin-top: var(--espaco-3);
+  }
+}

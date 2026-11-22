@@ -1,0 +1,64 @@
+/* Cabeçalho fixo no topo durante a rolagem. */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: var(--cor-primaria);
+  box-shadow: var(--sombra);
+}
+
+/* Marca à esquerda e menu à direita. Com flex-wrap, o menu expandido no mobile
+   quebra para a linha de baixo e ocupa a largura toda. */
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-1);
+  padding-block: var(--espaco-1);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-1);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.marca:hover .logo {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.logo {
+  width: 2rem;
+  height: auto;
+  transition: transform var(--transicao);
+}
+
+.nomeSite {
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.nomeSite strong {
+  color: var(--cor-dourado);
+}
+
+/* Tablet */
+@media (min-width: 601px) {
+  .logo {
+    width: 2.5rem;
+  }
+
+  .nomeSite {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .barra {
+    flex-wrap: nowrap;
+  }
+}

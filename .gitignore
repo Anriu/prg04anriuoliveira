@@ -1,0 +1,15 @@
+# Dependências (recriadas com `npm install`)
+node_modules/
+
+# Saída do build de produção
+dist/
+
+# Logs e arquivos do sistema/editor
+npm-debug.log*
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Variáveis de ambiente locais
+.env*.local

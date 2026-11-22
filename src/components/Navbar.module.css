@@ -1,0 +1,70 @@
+/* Ajustes de identidade visual sobre o navbar do Bootstrap. */
+
+/* O <nav> é item flex do Header; aberto no mobile, ocupa a linha inteira
+   para listar os links em coluna. */
+.menu {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu:has(:global(.show)) {
+  flex-basis: 100%;
+}
+
+.lista {
+  gap: 0.25rem;
+  padding-block: var(--espaco-1);
+}
+
+/* Feedback de hover/foco com transição suave no fundo. */
+.link {
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background-color var(--transicao), color var(--transicao);
+}
+
+.link:hover,
+.link:focus-visible {
+  background-color: var(--cor-azul-5);
+  color: #ffffff;
+}
+
+/* Rota atual (classe .active aplicada pelo NavLink). */
+.link:global(.active) {
+  color: var(--cor-dourado);
+  font-weight: 700;
+}
+
+.botao {
+  width: 100%;
+  margin-top: var(--espaco-1);
+  padding-inline: var(--espaco-2);
+}
+
+/* Tablet: mais área de toque entre os itens. */
+@media (min-width: 601px) {
+  .lista {
+    gap: 0.5rem;
+  }
+}
+
+/* Menu horizontal: 992px é o breakpoint "lg" do Bootstrap, o mesmo em que a classe
+   navbar-expand-lg deixa de recolher o menu. Usar outro valor aqui deixaria o
+   botão esticado entre 992px e 1024px. */
+@media (min-width: 992px) {
+  .menu:has(:global(.show)) {
+    flex-basis: auto;
+  }
+
+  .lista {
+    align-items: center;
+    padding-block: 0;
+  }
+
+  .botao {
+    width: auto;
+    margin-top: 0;
+    margin-left: var(--espaco-1);
+  }
+}

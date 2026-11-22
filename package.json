@@ -1,0 +1,24 @@
+{
+  "name": "portal-da-filarmonica",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Portal da Filarmônica — projeto individual da disciplina PRG04 (Programação Web), refatorado para React.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.9",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.4.1"
+  }
+}

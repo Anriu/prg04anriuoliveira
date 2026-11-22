@@ -1,0 +1,91 @@
+/* Cada classe de cor referencia um token definido em :root (src/styles/index.css). */
+
+/* Mobile: duas amostras por linha. */
+.amostra {
+  flex: 1 1 calc(50% - var(--espaco-1));
+  min-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: var(--espaco-1);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transicao);
+}
+
+.amostra:hover {
+  transform: scale(1.04);
+}
+
+.textoEscuro {
+  color: var(--cor-instrumento-4);
+}
+
+.hex {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.03em;
+}
+
+.papel {
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Azuis */
+.azul1 { background-color: var(--cor-azul-1); }
+.azul2 { background-color: var(--cor-azul-2); }
+.azul3 { background-color: var(--cor-azul-3); }
+.azul4 { background-color: var(--cor-azul-4); }
+.azul5 { background-color: var(--cor-azul-5); }
+
+/* Verdes */
+.verde1 { background-color: var(--cor-verde-1); }
+.verde2 { background-color: var(--cor-verde-2); }
+.verde3 { background-color: var(--cor-verde-3); }
+.verde4 { background-color: var(--cor-verde-4); }
+.verde5 { background-color: var(--cor-verde-5); }
+
+/* Destaque */
+.vermelho { background-color: var(--cor-vermelho); }
+
+/* Neutras */
+.cinza1 { background-color: var(--cor-cinza-1); }
+.cinza2 { background-color: var(--cor-cinza-2); }
+.cinza3 { background-color: var(--cor-cinza-3); }
+.cinza4 { background-color: var(--cor-cinza-4); }
+.cinza5 { background-color: var(--cor-cinza-5); }
+
+/* Instrumentos */
+.instrumento1 { background-color: var(--cor-instrumento-1); }
+.instrumento2 { background-color: var(--cor-instrumento-2); }
+.instrumento3 { background-color: var(--cor-instrumento-3); }
+.instrumento4 { background-color: var(--cor-instrumento-4); }
+.instrumento5 { background-color: var(--cor-instrumento-5); }
+.instrumento6 { background-color: var(--cor-instrumento-6); }
+.instrumento7 { background-color: var(--cor-instrumento-7); }
+.instrumento8 { background-color: var(--cor-instrumento-8); }
+.instrumento9 { background-color: var(--cor-instrumento-9); }
+.instrumento10 { background-color: var(--cor-instrumento-10); }
+
+/* Tablet: três por linha. */
+@media (min-width: 601px) {
+  .amostra {
+    flex-basis: calc(33.333% - var(--espaco-1));
+  }
+}
+
+/* Desktop: cinco por linha. */
+@media (min-width: 1025px) {
+  .amostra {
+    flex-basis: calc(20% - var(--espaco-1));
+    min-height: 5.5rem;
+  }
+}

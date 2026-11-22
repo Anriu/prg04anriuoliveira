@@ -1,0 +1,55 @@
+.apresentacao {
+  text-align: left;
+}
+
+/* Selo de boas-vindas. */
+.chamada {
+  display: inline-block;
+  margin-bottom: var(--espaco-2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  background-color: var(--cor-instrumento-6);
+  color: var(--cor-instrumento-10);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Mobile: botões em coluna e largura total, facilitando o toque. */
+.acoes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  margin-top: var(--espaco-3);
+}
+
+.curiosidade {
+  padding: var(--espaco-3);
+  border-left: 0.4rem solid var(--cor-secundaria);
+  border-radius: var(--raio);
+  background-color: var(--cor-superficie);
+  box-shadow: var(--sombra);
+}
+
+.linkCuriosidade {
+  font-weight: 700;
+  color: var(--cor-secundaria);
+}
+
+.linkCuriosidade:hover {
+  color: var(--cor-verde-3);
+}
+
+/* Tablet: botões lado a lado. */
+@media (min-width: 601px) {
+  .acoes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Desktop: mais espaçamento interno. */
+@media (min-width: 1025px) {
+  .curiosidade {
+    padding: var(--espaco-4);
+  }
+}
